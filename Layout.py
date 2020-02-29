@@ -1,6 +1,7 @@
 #!evn01/Scripts/python3.8
 """ docString"""
 from tkinter import *
+from tkinter import ttk
 
 def readText():
     print('button click')
@@ -12,23 +13,20 @@ def interface(w):
     w.geometry("900x600") #視窗大小
     w.wm_resizable(height=False, width=False)
 
-    menuFrame = Frame(w,bg='purple',width=200)
+    Label( text='姓名').pack()
+    Label( text='體溫').pack()
+    Label(text='量測數據').pack()
+    Button(text='上傳').pack()
 
-    
-    lineFrame = Frame(menuFrame, borderwidth=2, relief=GROOVE, width=200, bg='purple')
-    Button(lineFrame,text='讀入text',command=readText).pack(fill=BOTH,expand=TRUE)
-    Button(lineFrame, text='ok2').pack(fill=BOTH,expand=TRUE,pady=5)
-    Button(lineFrame, text='ok3').pack(fill=BOTH,expand=TRUE)
-    lineFrame.pack(expand=YES, fill=BOTH,padx=10,pady=10)
-    menuFrame.pack(side=LEFT, expand=YES,fill=BOTH)
-
-    menuFrame.pack(side=LEFT, expand=YES,fill=BOTH)
-
-    rightFrame = Frame(w, bg='gray',width=400)
-
-    rightFrame.pack(side=LEFT, expand=YES, fill=BOTH)
-
-
+    '''建立區域擺放清單(待處理)'''
+    listView = Frame(window,borderwidth=100, relief=GROOVE)
+    tree = ttk.Treeview(listView, columns=('col1', 'col2', 'col3'))
+    tree.column('col1', width=100, anchor='center')
+    tree.column('col2', width=100, anchor='center')
+    tree.column('col3', width=100, anchor='center')
+    tree.heading('col1', text='col1')
+    tree.heading('col2', text='col2')
+    tree.heading('col3', text='col3')
 
 if __name__ == "__main__":
     window = Tk()

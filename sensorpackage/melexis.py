@@ -1,5 +1,5 @@
 import Adafruit_GPIO.I2C as I2C
-import gpiozero import Button
+from gpiozero import Button
 # I2C.require_repeated_start()
 
 class Melexis:
@@ -30,8 +30,10 @@ class Melexis:
 # if name == "main":
 sensor = Melexis()
 button = Button(18) #按鈕的角位(尚未設定)
-if button.is_pressed: #此步驟設定按鈕偵聽量測
-    temp = sensor.btnPress()
-t = sensor.readObject1()
-a = sensor.readAmbient()
+while True:
+    if button.is_pressed: #此步驟設定按鈕偵聽量測
+        temp = sensor.btnPress()
+        t = sensor.readObject1()
+        a = sensor.readAmbient()
+        print("Object: {}C , Ambiant: {}C".format(round(t, 3), round(a, 3)))
 

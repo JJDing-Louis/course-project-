@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35e696eb-572a-4f54-91a4-6b30feef6b77" name="Default Changelist" comment="" />
+    <list default="true" id="35e696eb-572a-4f54-91a4-6b30feef6b77" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensorpackage/melexis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensorpackage/melexis.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/tkinter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Personal-Work-Space/Python Project/OpenCV video test" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -117,26 +120,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583065596216" />
-    <state x="499" y="110" key="FileChooserDialogImpl" timestamp="1583046111463">
+    <state x="499" y="110" key="FileChooserDialogImpl" timestamp="1583070520146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="110" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583046111463" />
-    <state width="1510" height="170" key="GridCell.Tab.0.bottom" timestamp="1583055287727">
+    <state x="499" y="110" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583070520146" />
+    <state width="1510" height="29" key="GridCell.Tab.0.bottom" timestamp="1583066085743">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="170" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583055287727" />
-    <state width="1510" height="170" key="GridCell.Tab.0.center" timestamp="1583055287727">
+    <state width="1510" height="29" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583066085743" />
+    <state width="1510" height="29" key="GridCell.Tab.0.center" timestamp="1583066085743">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="170" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583055287727" />
-    <state width="1510" height="170" key="GridCell.Tab.0.left" timestamp="1583055287726">
+    <state width="1510" height="29" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583066085743" />
+    <state width="1510" height="29" key="GridCell.Tab.0.left" timestamp="1583066085742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="170" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583055287726" />
-    <state width="1510" height="170" key="GridCell.Tab.0.right" timestamp="1583055287727">
+    <state width="1510" height="29" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583066085742" />
+    <state width="1510" height="29" key="GridCell.Tab.0.right" timestamp="1583066085743">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="170" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583055287727" />
+    <state width="1510" height="29" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583066085743" />
     <state width="1510" height="247" key="GridCell.Tab.1.bottom" timestamp="1583046175751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

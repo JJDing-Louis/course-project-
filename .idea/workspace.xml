@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="35e696eb-572a-4f54-91a4-6b30feef6b77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sensorpackage/melexis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensorpackage/melexis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,14 +90,22 @@
       <option name="project" value="LOCAL" />
       <updated>1583055237550</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="新增硬體按鈕設定程式(尚未完成)">
+      <created>1583057661733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583057661733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="用frame去實現清單視窗(測試)" />
     <MESSAGE value="修改TreeView欄位格式&#10;新增關閉視窗的MessageBox" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改TreeView欄位格式&#10;新增關閉視窗的MessageBox" />
+    <MESSAGE value="新增硬體按鈕設定程式(尚未完成)" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增硬體按鈕設定程式(尚未完成)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="592" y="0" key="CommitChangelistDialog2" timestamp="1583057660416">

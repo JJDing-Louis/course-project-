@@ -21,7 +21,6 @@ class Melexis:
         return temp
 
     def btnPress(self): #按鈕偵聽程式
-        sensor = Melexis()
         t = sensor.readObject1()
         a = sensor.readAmbient()
         print("Object: {}C , Ambiant: {}C".format(round(t, 3), round(a, 3)))
@@ -30,9 +29,9 @@ class Melexis:
 
 # if name == "main":
 sensor = Melexis()
-btn = Button(2)
-if btn.is_pressed: #此步驟設定按鈕偵聽量測
-    temp = btnPress()
+button = Button(18) #按鈕的角位(尚未設定)
+if button.is_pressed: #此步驟設定按鈕偵聽量測
+    temp = sensor.btnPress()
 t = sensor.readObject1()
 a = sensor.readAmbient()
 

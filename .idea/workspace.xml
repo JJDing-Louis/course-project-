@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="35e696eb-572a-4f54-91a4-6b30feef6b77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensorpackage/melexis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensorpackage/melexis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

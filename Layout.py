@@ -15,8 +15,11 @@ def closeWindow(): #關閉視窗的MessgaeBox function
         window.destroy()
     else:
         return
+def upLoad():
+    '''資料庫待建立'''
 
-def interface(w):
+
+def interface(w): #建立視窗畫面
     """ 建立介面 """
     w.option_add("*font", ('verdana', 16))
     w.title("體溫量測")  # 視窗標題
@@ -24,7 +27,7 @@ def interface(w):
 
     name = Label(w, text='姓名:').place(x=10, y=10)
     temp = Label(w, text='體溫:').place(x=160, y=10)
-    upload = Button(w, text='上傳').place(x=420, y=15)
+    upload = Button(w, text='上傳',command=upLoad()).place(x=420, y=15)
     w.wm_resizable(height=False, width=False)
 
     '''建立區域擺放清單'''

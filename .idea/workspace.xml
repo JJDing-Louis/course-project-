@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="35e696eb-572a-4f54-91a4-6b30feef6b77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensorpackage/melexis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensorpackage/melexis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensorpackage/melexis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensorpackage/Melexis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Personal-Work-Space/Python Project/OpenCV video test" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/raseberry/iotProject" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -104,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583065597550</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="按鈕觸控以測試完成(在melexis.py設定簡單程式碼進行)&#10;目標已物件導向是建立程式">
+      <created>1583081763951</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583081763951</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -113,53 +122,63 @@
     <MESSAGE value="修改TreeView欄位格式&#10;新增關閉視窗的MessageBox" />
     <MESSAGE value="新增硬體按鈕設定程式(尚未完成)" />
     <MESSAGE value="新增硬體按鈕設定程式(尚未測試)" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增硬體按鈕設定程式(尚未測試)" />
+    <MESSAGE value="按鈕觸控以測試完成(在melexis.py設定簡單程式碼進行)&#10;目標已物件導向是建立程式" />
+    <option name="LAST_COMMIT_MESSAGE" value="按鈕觸控以測試完成(在melexis.py設定簡單程式碼進行)&#10;目標已物件導向是建立程式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="592" y="0" key="CommitChangelistDialog2" timestamp="1583081762286">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583081762286" />
-    <state x="499" y="110" key="FileChooserDialogImpl" timestamp="1583070520146">
+    <state x="499" y="110" key="FileChooserDialogImpl" timestamp="1583140022521">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="110" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583070520146" />
-    <state width="1510" height="29" key="GridCell.Tab.0.bottom" timestamp="1583081768634">
+    <state x="499" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583140022521" />
+    <state width="1510" height="72" key="GridCell.Tab.0.bottom" timestamp="1583139275421">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="29" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583081768634" />
-    <state width="1510" height="29" key="GridCell.Tab.0.center" timestamp="1583081768634">
+    <state width="1510" height="29" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367227" />
+    <state width="1510" height="72" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583139275421" />
+    <state width="1510" height="72" key="GridCell.Tab.0.center" timestamp="1583139275421">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="29" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583081768634" />
-    <state width="1510" height="29" key="GridCell.Tab.0.left" timestamp="1583081768634">
+    <state width="1510" height="29" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367227" />
+    <state width="1510" height="72" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583139275421" />
+    <state width="1510" height="72" key="GridCell.Tab.0.left" timestamp="1583139275421">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="29" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583081768634" />
-    <state width="1510" height="29" key="GridCell.Tab.0.right" timestamp="1583081768634">
+    <state width="1510" height="29" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367227" />
+    <state width="1510" height="72" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583139275421" />
+    <state width="1510" height="72" key="GridCell.Tab.0.right" timestamp="1583139275421">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="29" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583081768634" />
-    <state width="1510" height="247" key="GridCell.Tab.1.bottom" timestamp="1583046175751">
+    <state width="1510" height="29" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367227" />
+    <state width="1510" height="72" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583139275421" />
+    <state width="1510" height="247" key="GridCell.Tab.1.bottom" timestamp="1583084367224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="247" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583046175751" />
-    <state width="1510" height="247" key="GridCell.Tab.1.center" timestamp="1583046175751">
+    <state width="1510" height="247" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367224" />
+    <state width="1510" height="247" key="GridCell.Tab.1.center" timestamp="1583084367224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="247" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583046175751" />
-    <state width="1510" height="247" key="GridCell.Tab.1.left" timestamp="1583046175751">
+    <state width="1510" height="247" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367224" />
+    <state width="1510" height="247" key="GridCell.Tab.1.left" timestamp="1583084367224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="247" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583046175751" />
-    <state width="1510" height="247" key="GridCell.Tab.1.right" timestamp="1583046175751">
+    <state width="1510" height="247" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367224" />
+    <state width="1510" height="247" key="GridCell.Tab.1.right" timestamp="1583084367224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1510" height="247" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583046175751" />
+    <state width="1510" height="247" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1583084367224" />
     <state x="154" y="0" key="SettingsEditor" timestamp="1582997960768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="154" y="0" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1582997960768" />
+    <state x="396" y="195" key="com.intellij.ide.util.TipDialog" timestamp="1583112074762">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="396" y="195" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583112074762" />
     <state x="542" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583003622170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

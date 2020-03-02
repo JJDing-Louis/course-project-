@@ -3,32 +3,45 @@
 from tkinter import *
 from tkinter.ttk import *
 from tkinter import messagebox
+from sensorpackage import Melexis
+from gpiozero import Button
 
 
 def readText():
     print('button click')
 
 
-def closeWindow(): #關閉視窗的MessgaeBox function
-    ans=messagebox.askyesno('關閉視窗', '是否離開?')
+def btnPress(self):  # 按鈕偵聽程式
+    t = sensor.readObject1()
+    a = sensor.readAmbient()
+    print("Object: {}C , Ambiant: {}C".format(round(t, 3), round(a, 3)))
+    return t
+
+
+def closeWindow():  # 關閉視窗的MessgaeBox function
+    ans = messagebox.askyesno('關閉視窗', '是否離開?')
     if ans == True:
         window.destroy()
     else:
         return
+
+
 def upLoad():
     '''資料庫待建立'''
 
 
-def interface(w): #建立視窗畫面
+def interface(w):  # 建立視窗畫面
     """ 建立介面 """
     w.option_add("*font", ('verdana', 16))
     w.title("體溫量測")  # 視窗標題
     w.geometry("520x420")  # 視窗大小
 
-    name = Label(w, text='姓名:').place(x=10, y=10)
-    temp = Label(w, text='體溫:').place(x=160, y=10)
-    upload = Button(w, text='上傳',command=upLoad()).place(x=420, y=15)
-    w.wm_resizable(height=False, width=False)
+    Label(w, text='姓名:').place(x=10, y=10) #姓名標籤
+    Label(w, text='體溫:').place(x=160, y=10) #姓名標籤
+    Button(w, text='上傳', command=upLoad()).place(x=420, y=15) #上傳按鈕
+    w.wm_resizable(height=False, width=False)  # 固定視窗大小
+
+    '''建立數值輸入'''
 
     '''建立區域擺放清單'''
     labFrame = LabelFrame(w, text='量測數據')
@@ -49,10 +62,17 @@ def interface(w): #建立視窗畫面
     yscrollbar.config(command=tree.yview)  # y軸scroller
 
 
-
-
 if __name__ == "__main__":
+    sensor = Melexis()  # 建立sensor物件
+    button = Button(18)  # 按鈕的角位
     window = Tk()
-    window.protocol('WM_DELETE_WINDOW', closeWindow) #關閉視窗的MessgaeBox
+    window.protocol('WM_DELETE_WINDOW', closeWindow)  # 關閉視窗的MessgaeBox
     interface(w=window)
+    tempbody=0
+    if button.is_pressed:
+        tempbody = btnPress()
+    namedata='姓名'+ name
+    tempdata='體溫'+tempbody
+
+
     window.mainloop()

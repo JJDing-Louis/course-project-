@@ -1,5 +1,5 @@
 #!/usr/bin/python3.7
-from sensorpackage.melexis import *
+from sensorpackage.Melexis import *
 
 sensor = Melexis() #建立seneor物件
 t = sensor.readObject1() #讀取目標溫度

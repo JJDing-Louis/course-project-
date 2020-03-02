@@ -3,9 +3,19 @@
 from tkinter import *
 from tkinter.ttk import *
 from tkinter import messagebox
+from sensorpackage import Melexis
+from gpiozero import Button
 
 
+def readText():
+    print('button click')
 
+
+def btnPress(self):  # 按鈕偵聽程式
+    t = sensor.readObject1()
+    a = sensor.readAmbient()
+    print("Object: {}C , Ambiant: {}C".format(round(t, 3), round(a, 3)))
+    return t
 
 
 def closeWindow():  # 關閉視窗的MessgaeBox function
@@ -14,6 +24,11 @@ def closeWindow():  # 關閉視窗的MessgaeBox function
         window.destroy()
     else:
         return
+
+
+def upLoad():
+    '''資料庫待建立'''
+
 
 def interface(w):  # 建立視窗畫面
     """ 建立介面 """
@@ -56,4 +71,13 @@ if __name__ == "__main__":
     window = Tk()
     interface(w=window)
     window.protocol('WM_DELETE_WINDOW', closeWindow)  # 關閉視窗的MessgaeBox
+    sensor = Melexis()  # 建立sensor物件
+    button = Button(18)  # 按鈕的角位
+    tempbody=0
+    if button.is_pressed:
+        tempbody = btnPress()
+    namedata='姓名'
+    tempdata='體溫'+tempbody
+
+
     window.mainloop()

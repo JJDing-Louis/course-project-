@@ -5,9 +5,6 @@ from tkinter.ttk import *
 from tkinter import messagebox
 
 
-
-
-
 def closeWindow():  # 關閉視窗的MessgaeBox function
     ans = messagebox.askyesno('關閉視窗', '是否離開?')
     if ans == True:
@@ -15,20 +12,21 @@ def closeWindow():  # 關閉視窗的MessgaeBox function
     else:
         return
 
+
 def interface(w):  # 建立視窗畫面
     """ 建立介面 """
     w.option_add("*font", ('verdana', 16))
     w.title("體溫量測")  # 視窗標題
     w.geometry("520x420")  # 視窗大小
 
-    Label(w, text='姓名:').place(x=10, y=10) #姓名標籤
+    Label(w, text='姓名:').place(x=10, y=10)  # 姓名標籤
 
-    str=StringVar() #宣告字串變數
-    txt = Entry(w).place(x=90, y=10) #建立字串視窗
-    name=str.get() #取的字串視窗內容
+    str = StringVar()  # 宣告字串變數
+    txt = Entry(w, width=8).place(x=65, y=10)  # 建立字串視窗
+    name = str.get()  # 取的字串視窗內容
 
-    Label(w, text='體溫:').place(x=160, y=10) #體溫標籤
-    Button(w, text='上傳', command=upLoad()).place(x=420, y=15) #上傳按鈕
+    Label(w, text='體溫:').place(x=180, y=10)  # 體溫標籤
+    Button(w, text='上傳').place(x=420, y=15)  # 上傳按鈕
     w.wm_resizable(height=False, width=False)  # 固定視窗大小
 
     '''建立數值輸入'''

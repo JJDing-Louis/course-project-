@@ -68,14 +68,6 @@ class Database:
         print('////////////////////////////////////////')
         print('Done')
 
-        """
-        $ python Firebase-Read.py
-        DOC2 => {'年紀': '23', '工作': '魔法師', '姓名': '劉德華'}
-        姓名 => 劉德華
-        年紀 => 23
-        工作 => 魔法師
-        Done
-        """
 
     def delete(self, id):
         db = firestore.client()

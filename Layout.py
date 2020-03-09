@@ -5,7 +5,15 @@ from tkinter.ttk import *
 from tkinter import messagebox
 import tkinter as tk
 from firebasepackage.database import Database as db
-from sensorpackage.Melexis import Melexis
+from sensorpackage.Melexis import Melexis as m #0309修改過
+
+'''全域變數'''
+#變數局域問題待修改
+
+
+
+
+
 
 
 def closeWindow():  # 關閉視窗的MessgaeBox function
@@ -22,35 +30,43 @@ def interface(w):  # 建立視窗畫面
     w.title("體溫量測")  # 視窗標題
     w.geometry("620x465")  # 視窗大小
 
+    '''輸入姓名、ID'''
+    strId = StringVar()  # 宣告字串變數
+    id = strId.get()  # 取的字串視窗內容
+    strName = StringVar()  # 宣告字串變數
+    name = strName.get()  # 取的字串視窗內容
     Label(w, text='ID:').place(x=10, y=10)  # ID標籤
     Label(w, text='姓名:').place(x=10, y=55)  # 姓名標籤
+    Entry(w, textvariable=strId, width=8).place(x=65, y=10)  # 建立字串視窗
+    Entry(w, textvariable=strName, width=8).place(x=65, y=55)  # 建立字串視窗
 
-    strId = StringVar()  # 宣告字串變數
-    txtId = Entry(w, textvariable=strId, width=8).place(x=65, y=10)  # 建立字串視窗
-    id = strId.get()  # 取的字串視窗內容
+    '''量測溫度、判定狀態'''
+    txtTemp = tk.StringVar()
+    txtState = tk.StringVar()
+    txtTemp.set('體溫:', )
+    txtState.set('狀態:', )
+    tk.Label(w, textvariable=txtTemp).place(x=180, y=10)  # 體溫標籤
+    tk.Label(w, textvariable=txtState).place(x=180, y=55)  # 狀態標籤
 
-    strName = StringVar()  # 宣告字串變數
-    txtName = Entry(w, textvariable=strName, width=8).place(x=65, y=55)  # 建立字串視窗
-    name = strName.get()  # 取的字串視窗內容
-
-    '''建立數值輸入(測量)'''
-    sensor = Melexis()
+    '''建立數值輸入(測量)(3/9是做測試)'''
+    temp=m.btnPress()
+    if temp >= 37.5:
+        state = '發燒'
+        txtTemp.set('體溫:', temp)
+        txtState.set('狀態:', state)
+    else:
+        state = '正常'
+        txtTemp.set('體溫:', temp)
+        txtState.set('狀態:', state)
+    '''sensor = Melexis()
     button = Button(18)  # 按鈕的角位
     if button.is_pressed: #此步驟設定按鈕偵聽量測
         temp = sensor.readObject1()
         a = sensor.readAmbient()
-    if temp >=37.5:
-        state = '發燒'
-    else:
-        state = '正常'
+        '''
 
-    '''設定文字變數的問題'''
-    txtTemp = tk.StringVar()
-    txtState = tk.StringVar()
-    txtTemp.set('體溫:',temp)
-    txtState.set('狀態:',state)
-    tk.Label(w, textvariable=txtTemp).place(x=180, y=10)  # 體溫標籤
-    tk.Label(w, textvariable=txtState).place(x=180, y=55)  # 狀態標籤
+
+
 
     Button(w, text='新增', command=db.insert(name,temp,state)).place(x=420, y=15)  # 新增按鈕
     Button(w, text='刪除', command=db.delete(id)).place(x=420, y=65)  # 刪除按鈕
@@ -60,7 +76,7 @@ def interface(w):  # 建立視窗畫面
 
 
 
-    '''建立區域擺放清單'''
+    '''建立List'''
     labFrame = LabelFrame(w, text='量測數據')
     tree = Treeview(labFrame, columns=('ID', '姓名', '體溫', '狀態'), show='headings')
     tree.column('ID', width=40)
@@ -73,7 +89,10 @@ def interface(w):  # 建立視窗畫面
     tree.heading('狀態', text='狀態')
     tree.place(x=10, y=10, width=580, height=320)
     labFrame.place(x=10, y=95, width=600, height=360)
+    '''建立List內容(試做)'''
+    tree.insert("",0,text="line1" ,values=("134135","Jack","fever","37.5"))
 
+    '''視窗滾輪'''
     yscrollbar = Scrollbar(tree)  # y軸scroller物件
     yscrollbar.pack(side=RIGHT, fill=Y)  # y軸scroller包裝顯示
     yscrollbar.config(command=tree.yview)  # y軸scroller
@@ -82,5 +101,6 @@ def interface(w):  # 建立視窗畫面
 if __name__ == "__main__":
     window = Tk()
     interface(w=window)
+    db.searchAll() #執行階段就搜尋
     window.protocol('WM_DELETE_WINDOW', closeWindow)  # 關閉視窗的MessgaeBox
     window.mainloop()

@@ -43,7 +43,7 @@ def getregentry():
 
 ### Decoding Map
 
-decoding_map = codecs.make_identity_dict(range(256))
+decoding_map = codecs
 decoding_map.update({
     0x0080: None,       #  UNDEFINED
     0x0081: None,       #  UNDEFINED

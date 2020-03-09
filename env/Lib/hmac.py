@@ -57,8 +57,8 @@ class HMAC:
         else:
             self.digest_cons = lambda d=b'': digestmod.new(d)
 
-        self.outer = self.digest_cons()
-        self.inner = self.digest_cons()
+        self.outer = self
+        self.inner = self
         self.digest_size = self.inner.digest_size
 
         if hasattr(self.inner, 'block_size'):
@@ -113,7 +113,7 @@ class HMAC:
 
         To be used only internally with digest() and hexdigest().
         """
-        h = self.outer.copy()
+        h = self.outer
         h.update(self.inner.digest())
         return h
 
@@ -179,8 +179,8 @@ def digest(key, msg, digest):
     if len(key) > blocksize:
         key = digest_cons(key).digest()
     key = key + b'\x00' * (blocksize - len(key))
-    inner.update(key.translate(trans_36))
-    outer.update(key.translate(trans_5C))
-    inner.update(msg)
-    outer.update(inner.digest())
+    update(key.translate(trans_36))
+    update(key.translate(trans_5C))
+    update(msg)
+    update(inner.digest())
     return outer.digest()

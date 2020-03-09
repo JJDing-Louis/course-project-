@@ -202,14 +202,14 @@ except ImportError:
         if len(password) > blocksize:
             password = new(hash_name, password).digest()
         password = password + b'\x00' * (blocksize - len(password))
-        inner.update(password.translate(_trans_36))
-        outer.update(password.translate(_trans_5C))
+        update(password.translate(_trans_36))
+        update(password.translate(_trans_5C))
 
         def prf(msg, inner=inner, outer=outer):
             # PBKDF2_HMAC uses the password as key. We can re-use the same
             # digest objects and just update copies to skip initialization.
-            icpy = inner.copy()
-            ocpy = outer.copy()
+            icpy = inner
+            ocpy = outer
             icpy.update(msg)
             ocpy.update(icpy.digest())
             return ocpy.digest()

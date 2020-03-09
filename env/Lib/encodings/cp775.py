@@ -42,7 +42,7 @@ def getregentry():
     )
 ### Decoding Map
 
-decoding_map = codecs.make_identity_dict(range(256))
+decoding_map = codecs
 decoding_map.update({
     0x0080: 0x0106,     #  LATIN CAPITAL LETTER C WITH ACUTE
     0x0081: 0x00fc,     #  LATIN SMALL LETTER U WITH DIAERESIS

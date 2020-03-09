@@ -2,12 +2,25 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import Layout
 
 cred = credentials.Certificate("D:\course-project-\jjnetnewapp-firebase-adminsdk-jc4tw-0abdc5dbd0.json")
 project_id = "file"
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 import random as rd
+
+
+def update(id, name, temp, state):
+    db = firestore.client()
+    doc_ref = db.collection('file').document(id)
+    data = {
+        '姓名': name,
+        '體溫': temp,
+        '狀態': state,
+    }
+    doc_ref.update(data)
+    print('Done')
 
 
 class Database:
@@ -35,17 +48,6 @@ class Database:
         doc_ref.set(data)
         print('Done')
 
-    def update(self, id, name, temp, state):
-        db = firestore.client()
-        doc_ref = db.collection('file').document(id)
-        data = {
-            '姓名': name,
-            '體溫': temp,
-            '狀態': state,
-        }
-        doc_ref.update(data)
-        print('Done')
-
     def searchAll(self):  # 此步驟會輸出所有資料表的dic
 
         db = firestore.client()
@@ -58,7 +60,7 @@ class Database:
             print('////////////////////////////////////////')
         print('Done')
 
-    def search(self,id):     # 此步驟會輸出單一資料
+    def search(self, id):  # 此步驟會輸出單一資料
         db = firestore.client()
         doc_ref = db.collection('file').document(id)
         doc = doc_ref.get()
@@ -67,7 +69,6 @@ class Database:
         print('狀態 => {}'.format(doc.to_dict()['狀態']))
         print('////////////////////////////////////////')
         print('Done')
-
 
     def delete(self, id):
         db = firestore.client()

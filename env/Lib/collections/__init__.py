@@ -513,7 +513,7 @@ class Counter(dict):
     0
 
     >>> d = Counter('simsalabim')       # make another counter
-    >>> c.update(d)                     # add in the second counter
+    >>> update(d)                     # add in the second counter
     >>> c['a']                          # now there are nine 'a'
     9
 
@@ -611,9 +611,9 @@ class Counter(dict):
         Source can be an iterable, a dictionary, or another Counter instance.
 
         >>> c = Counter('which')
-        >>> c.update('witch')           # add elements from another iterable
+        >>> update('witch')           # add elements from another iterable
         >>> d = Counter('watch')
-        >>> c.update(d)                 # add elements from another counter
+        >>> update(d)                 # add elements from another counter
         >>> c['h']                      # four 'h' in which, witch, and watch
         4
 
@@ -989,9 +989,9 @@ class UserDict(_collections_abc.MutableMapping):
             dict = None
         self.data = {}
         if dict is not None:
-            self.update(dict)
+            update(dict)
         if kwargs:
-            self.update(kwargs)
+            update(kwargs)
     __init__.__text_signature__ = '($self, dict=None, /, **kwargs)'
 
     def __len__(self): return len(self.data)

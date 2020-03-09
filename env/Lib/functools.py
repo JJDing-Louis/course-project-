@@ -26,6 +26,7 @@ from _thread import RLock
 
 # update_wrapper() and wraps() are tools to help write
 # wrapper functions that can handle naive introspection
+from firebasepackage.database import update
 
 WRAPPER_ASSIGNMENTS = ('__module__', '__name__', '__qualname__', '__doc__',
                        '__annotations__')
@@ -53,7 +54,7 @@ def update_wrapper(wrapper,
         else:
             setattr(wrapper, attr, value)
     for attr in updated:
-        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))
+        update(getattr(wrapped, attr, {}))
     # Issue #17482: set __wrapped__ last so we don't inadvertently copy it
     # from the wrapped function when updating __dict__
     wrapper.__wrapped__ = wrapped

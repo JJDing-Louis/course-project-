@@ -5,15 +5,11 @@ from tkinter.ttk import *
 from tkinter import messagebox
 import tkinter as tk
 from firebasepackage.database import Database as db
+from gpiozero import Button
 from sensorpackage.Melexis import Melexis as m #0309修改過
 
 '''全域變數'''
 #變數局域問題待修改
-
-
-
-
-
 
 
 def closeWindow():  # 關閉視窗的MessgaeBox function

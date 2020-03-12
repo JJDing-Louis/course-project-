@@ -2,7 +2,7 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-import Layout
+
 
 cred = credentials.Certificate("D:\course-project-\jjnetnewapp-firebase-adminsdk-jc4tw-0abdc5dbd0.json")
 project_id = "file"
